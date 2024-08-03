@@ -18,7 +18,7 @@ function ServiceCardContent() {
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" className="mt-2">
-          Book Appointment
+					Reserva una cita
         </Button>
       </PopoverTrigger>
       <PopoverContent className="p-0 max-w-[276px]">
@@ -28,7 +28,7 @@ function ServiceCardContent() {
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" className="mt-2">
-          Leave a Review
+					Deja un comentario
         </Button>
       </PopoverTrigger>
       <PopoverContent className="p-0 max-w-[276px]">
@@ -43,11 +43,11 @@ export default function Client() {
     <div className="flex flex-col min-h-dvh">
       <header className="bg-primary px-4 lg:px-6 h-14 flex items-center justify-between">
         <Link href="#" className="text-primary-foreground font-bold text-lg" prefetch={false}>
-          Injection Ratings
+          Calificaciones de Servicios de Salud
         </Link>
         <div className="flex items-center gap-4">
           <div className="relative w-full max-w-md">
-            <Input type="search" placeholder="Search providers..." className="pr-10"/>
+            <Input type="search" placeholder="Buscar proveedores..." className="pr-10"/>
             <SearchIcon className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground"/>
           </div>
           <NavigationMenu>
@@ -58,7 +58,7 @@ export default function Client() {
                   className="group inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
-                  Home
+                  Inicio
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuLink asChild>
@@ -67,7 +67,7 @@ export default function Client() {
                   className="group inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
-                  Reviews
+									Reseñas
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuLink asChild>
@@ -76,7 +76,7 @@ export default function Client() {
                   className="group inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
-                  About
+                  Acerca
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuLink asChild>
@@ -96,7 +96,7 @@ export default function Client() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-8 px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Find the Best Injection Services
+              Encuentra los mejores servicios de salud
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <Card className="w-full">
@@ -164,8 +164,7 @@ export default function Client() {
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container space-y-8 px-4 md:px-6">
-            <h2 id="reviews" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Your Past
-              Reviews</h2>
+            <h2 id="reviews" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Tus reseñas pasadas</h2>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <Card className="w-full">
                 <CardHeader className="flex items-center justify-between">
@@ -179,7 +178,7 @@ export default function Client() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-4">
-                  <p>Great service, friendly staff, and quick injection process.</p>
+                  <p>Excelente servicio, personal amable y proceso de inyección rápido.</p>
                 </CardContent>
               </Card>
               <Card className="w-full">
@@ -194,7 +193,7 @@ export default function Client() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-4">
-                  <p>Efficient and professional service, but a bit pricey.</p>
+                  <p>Servicio eficiente y profesional, aunque un poco caro.</p>
                 </CardContent>
               </Card>
               <Card className="w-full">
@@ -209,7 +208,7 @@ export default function Client() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-4">
-                  <p>Good service, but the wait time was a bit long.</p>
+                  <p>Buen servicio, pero el tiempo de espera fue un poco largo.</p>
                 </CardContent>
               </Card>
               <Card className="w-full">
@@ -224,7 +223,7 @@ export default function Client() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-4">
-                  <p>Average service, but the staff was friendly.</p>
+                  <p>Servicio mediocre, pero el personal era amable.</p>
                 </CardContent>
               </Card>
             </div>
@@ -233,7 +232,7 @@ export default function Client() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-8 px-4 md:px-6">
             <h2 id="chat" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Chat with an AI to Find the Best Services
+              Chatea con la IA y encuentra los mejores servicios
             </h2>
             <div className="flex flex-col items-center justify-center">
               <Card className="w-full max-w-md">
@@ -244,47 +243,40 @@ export default function Client() {
                       <AvatarFallback>AI</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="text-sm font-medium leading-none">Injection Advisor</p>
+                      <p className="text-sm font-medium leading-none">Asesor virtual</p>
                       <p className="text-sm text-muted-foreground">ai@injectionratings.com</p>
                     </div>
                   </div>
                   <Button size="icon" variant="outline" className="ml-auto rounded-full">
                     <PlusIcon className="w-4 h-4"/>
-                    <span className="sr-only">New message</span>
+                    <span className="sr-only">Nuevo Mensaje</span>
                   </Button>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div
                       className="flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm ml-auto bg-primary text-primary-foreground">
-                      Hi there! How can I assist you in finding the best injection services?
+											¡Hola! ¿Cómo puedo ayudarle a encontrar los mejores servicios de inyección?
                     </div>
                     <div className="flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm bg-muted">
-                      I'm looking for a clinic that offers quick and reliable injections. Can you recommend any good
-                      options in my area?
+											Estoy buscando una clínica que ofrezca inyecciones rápidas y confiables. ¿Puedes recomendarme alguna buena opción en mi zona?
                     </div>
                     <div
                       className="flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm ml-auto bg-primary text-primary-foreground">
-                      Absolutely! Based on your location and the reviews from other users, I would recommend checking
-                      out ABC Medical Clinic and XYZ Wellness Clinic. They both have high ratings and are known for
-                      their efficient and friendly service.
+											¡Absolutamente! Según su ubicación y las opiniones de otros usuarios, recomendaría visitar ABC Medical Clinic y XYZ Wellness Clinic. Ambos tienen altas calificaciones y son conocidos por su servicio eficiente y amigable.
                     </div>
                     <div className="flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm bg-muted">
-                      That's great, thank you! I'll take a look at those options. Is there anything else I should
-                      consider when choosing an injection provider?
+											¡Eso es genial, Gracias! Echaré un vistazo a esas opciones. ¿Hay algo más que deba considerar al elegir un proveedor de inyecciones?
                     </div>
                     <div
                       className="flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm ml-auto bg-primary text-primary-foreground">
-                      Some other important factors to consider are the clinic's cleanliness, the experience and
-                      qualifications of the staff, and the overall convenience of the location and appointment
-                      availability. I'd also recommend reading through any past reviews to get a sense of the patient
-                      experience.
+											Algunos otros factores importantes a considerar son la limpieza de la clínica, la experiencia y las calificaciones del personal, y la conveniencia general de la ubicación y la disponibilidad de citas. También recomendaría leer reseñas anteriores para tener una idea de la experiencia del paciente.
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter>
                   <form className="flex items-center w-full space-x-2">
-                    <Input id="message" placeholder="Type your message..." className="flex-1" autoComplete="off"/>
+                    <Input id="message" placeholder="Escriba su mensaje..." className="flex-1" autoComplete="off"/>
                     <Button type="submit" size="icon">
                       <SendIcon className="w-4 h-4"/>
                       <span className="sr-only">Send</span>
@@ -297,13 +289,13 @@ export default function Client() {
         </section>
       </main>
       <footer className="bg-primary text-primary-foreground px-4 lg:px-6 py-4 flex items-center justify-between">
-        <p className="text-sm">&copy; 2024 Injection Ratings</p>
+        <p className="text-sm">&copy; 2024 Calificaciones de Servicios de Salud</p>
         <div className="flex items-center gap-4">
           <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Privacy
+            Reglamento de privacidad
           </Link>
           <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Terms
+            Términos y Condiciones
           </Link>
           <Link href="#" className="text-sm" prefetch={false}/>
         </div>

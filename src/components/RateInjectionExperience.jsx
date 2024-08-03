@@ -12,8 +12,8 @@ export default function RateInjectionExperience() {
   return (
     <Card className="w-full max-w-md mx-auto p-6">
       <CardHeader>
-        <CardTitle>Rate Your Injection Experience</CardTitle>
-        <CardDescription>Help us improve our health services by sharing your feedback.</CardDescription>
+        <CardTitle>Califique su experiencia</CardTitle>
+        <CardDescription>Ayúdanos a mejorar nuestros servicios de salud compartiendo sus comentarios.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-6">
         <div className="flex items-center gap-2">
@@ -25,13 +25,13 @@ export default function RateInjectionExperience() {
           <span className="text-sm text-muted-foreground">3.2 out of 5</span>
         </div>
         <div className="grid gap-2">
-          <Label htmlFor="feedback">Additional Feedback</Label>
-          <Textarea id="feedback" rows={3} placeholder="Share your thoughts..." />
+          <Label htmlFor="feedback">Comentarios adicionales</Label>
+          <Textarea id="feedback" rows={3} placeholder="Comparte tus pensamientos..." />
         </div>
       </CardContent>
       <CardFooter>
         <Button type="submit" className="ml-auto">
-          Submit
+          Enviar
         </Button>
       </CardFooter>
     </Card>

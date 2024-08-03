@@ -21,43 +21,43 @@ export default function Admin() {
         <div className="flex items-center gap-4">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <DatabaseIcon className="h-6 w-6" />
-            <span className="font-bold">Backstore</span>
+            <span className="font-bold">Admin</span>
           </Link>
           <nav className="hidden gap-4 text-sm font-medium sm:flex">
             <Link href="#dashboard" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Dashboard
             </Link>
             <Link href="#reservations" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-              Reservations
+              Citas
             </Link>
             <Link href="#predictive" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-              Predictive Analysis
+              Análisis Predictivos
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-              Settings
+              Configuración
             </Link>
             <Link href="/" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-              Shots App
+              Aplicación
             </Link>
           </nav>
         </div>
         <div className="flex items-center gap-2">
           <Input
             type="search"
-            placeholder="Search..."
+            placeholder="Buscar..."
             className="max-w-[200px] rounded-md bg-background px-3 py-2 text-sm"
           />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
-                <img src="/placeholder.svg" width={32} height={32} className="rounded-full" alt="Avatar" />
+                <img src="/avatar.png" width={32} height={32} className="rounded-full" alt="Avatar" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuItem>Perfil</DropdownMenuItem>
+              <DropdownMenuItem>Preferencias</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem>Salir</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -68,70 +68,70 @@ export default function Admin() {
             <div className="flex items-center justify-between">
               <h2 id="dashboard" className="text-2xl font-bold">Dashboard</h2>
               <Button variant="outline" size="sm">
-                View Reports
+                Reportes
               </Button>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>Total Reservations</CardTitle>
+                  <CardTitle>Total de Citas</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-4xl font-bold">1,234</div>
-                  <div className="text-sm text-muted-foreground">+15% from last month</div>
+                  <div className="text-sm text-muted-foreground">+15% último mes</div>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Upcoming Reservations</CardTitle>
+                  <CardTitle>Próximas citas</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-4xl font-bold">789</div>
-                  <div className="text-sm text-muted-foreground">+10% from last month</div>
+                  <div className="text-sm text-muted-foreground">+10% último mes</div>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Cancelled Reservations</CardTitle>
+                  <CardTitle>Citas Canceladas</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-4xl font-bold">123</div>
-                  <div className="text-sm text-muted-foreground">-5% from last month</div>
+                  <div className="text-sm text-muted-foreground">-5% último mes</div>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Seasonal Demand</CardTitle>
+                  <CardTitle>Demanda por temporada</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-4xl font-bold">85%</div>
-                  <div className="text-sm text-muted-foreground">+20% from last year</div>
+                  <div className="text-sm text-muted-foreground">+20% último año</div>
                 </CardContent>
               </Card>
             </div>
           </section>
           <section>
             <div className="flex items-center justify-between">
-              <h2 id="reservations" className="text-2xl font-bold">Reservations</h2>
+              <h2 id="reservations" className="text-2xl font-bold">Citas</h2>
               <div className="flex items-center gap-2">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline" size="sm" className="gap-1">
                       <FilterIcon className="h-4 w-4" />
-                      <span>Filter</span>
+                      <span>Filtro</span>
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
-                    <DropdownMenuLabel>Filter by</DropdownMenuLabel>
+                    <DropdownMenuLabel>Filtrar por</DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuCheckboxItem checked>Upcoming</DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>Cancelled</DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>Past</DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem checked>Próximas</DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>Canceladas</DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>Pasadas</DropdownMenuCheckboxItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
                 <Button variant="outline" size="sm">
                   <PlusIcon className="h-4 w-4" />
-                  <span>New Reservation</span>
+                  <span>Nuevas Citas</span>
                 </Button>
               </div>
             </div>
@@ -140,11 +140,11 @@ export default function Admin() {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Reservation ID</TableHead>
-                      <TableHead>Customer</TableHead>
-                      <TableHead>Date</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead>Actions</TableHead>
+                      <TableHead>Cita ID</TableHead>
+                      <TableHead>Cliente</TableHead>
+                      <TableHead>Fecha</TableHead>
+                      <TableHead>Estado</TableHead>
+                      <TableHead>Acciones</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -160,7 +160,7 @@ export default function Admin() {
                       </TableCell>
                       <TableCell>2023-05-15</TableCell>
                       <TableCell>
-                        <Badge variant="secondary">Upcoming</Badge>
+                        <Badge variant="secondary">Próxima</Badge>
                       </TableCell>
                       <TableCell>
                         <div className="flex items-center gap-2">
@@ -185,7 +185,7 @@ export default function Admin() {
                       </TableCell>
                       <TableCell>2023-05-20</TableCell>
                       <TableCell>
-                        <Badge variant="outline">Cancelled</Badge>
+                        <Badge variant="outline">Cancelada</Badge>
                       </TableCell>
                       <TableCell>
                         <div className="flex items-center gap-2">
@@ -210,7 +210,7 @@ export default function Admin() {
                       </TableCell>
                       <TableCell>2023-05-25</TableCell>
                       <TableCell>
-                        <Badge variant="secondary">Upcoming</Badge>
+                        <Badge variant="secondary">Próxima</Badge>
                       </TableCell>
                       <TableCell>
                         <div className="flex items-center gap-2">
@@ -230,15 +230,15 @@ export default function Admin() {
           </section>
           <section>
             <div className="flex items-center justify-between">
-              <h2 id="predictive" className="text-2xl font-bold">Predictive Analysis</h2>
+              <h2 id="predictive" className="text-2xl font-bold">Análisis Predictivo</h2>
               <Button variant="outline" size="sm">
-                View Predictions
+                Ver predicciones
               </Button>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader>
-                  <CardTitle>Seasonal Demand</CardTitle>
+                  <CardTitle>Demanda por Temporada</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <AreachartChart className="aspect-[4/3]" />
@@ -246,7 +246,7 @@ export default function Admin() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Reservation Trends</CardTitle>
+                  <CardTitle>Tendencias de Citas</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <BarchartChart className="aspect-[4/3]" />
@@ -254,7 +254,7 @@ export default function Admin() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Seasonal Diseases</CardTitle>
+                  <CardTitle>Enfermedades de Temporada</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <AreachartChart className="aspect-[4/3]" />
@@ -283,12 +283,12 @@ function AreachartChart(props) {
         <AreaChart
           accessibilityLayer
           data={[
-            { month: "January", desktop: 186 },
-            { month: "February", desktop: 305 },
-            { month: "March", desktop: 237 },
-            { month: "April", desktop: 73 },
-            { month: "May", desktop: 209 },
-            { month: "June", desktop: 214 },
+            { month: "Enero", desktop: 186 },
+            { month: "Febrery", desktop: 305 },
+            { month: "Marzo", desktop: 237 },
+            { month: "Abril", desktop: 73 },
+            { month: "Mayo", desktop: 209 },
+            { month: "Junio", desktop: 214 },
           ]}
           margin={{
             left: 12,
@@ -333,12 +333,12 @@ function BarchartChart(props) {
         <BarChart
           accessibilityLayer
           data={[
-            { month: "January", desktop: 186 },
-            { month: "February", desktop: 305 },
-            { month: "March", desktop: 237 },
-            { month: "April", desktop: 73 },
-            { month: "May", desktop: 209 },
-            { month: "June", desktop: 214 },
+            { month: "Enero", desktop: 186 },
+            { month: "Febrero", desktop: 305 },
+            { month: "Marzo", desktop: 237 },
+            { month: "Abril", desktop: 73 },
+            { month: "Mayo", desktop: 209 },
+            { month: "Junio", desktop: 214 },
           ]}
         >
           <CartesianGrid vertical={false} />
@@ -436,12 +436,12 @@ function LinechartChart(props) {
         <LineChart
           accessibilityLayer
           data={[
-            { month: "January", desktop: 186 },
-            { month: "February", desktop: 305 },
-            { month: "March", desktop: 237 },
-            { month: "April", desktop: 73 },
-            { month: "May", desktop: 209 },
-            { month: "June", desktop: 214 },
+            { month: "Enero", desktop: 186 },
+            { month: "Febrero", desktop: 305 },
+            { month: "Marzo", desktop: 237 },
+            { month: "Abril", desktop: 73 },
+            { month: "Mayo", desktop: 209 },
+            { month: "Junio", desktop: 214 },
           ]}
           margin={{
             left: 12,
